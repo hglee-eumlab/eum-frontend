@@ -10,8 +10,8 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./styles": "./dist/styles/globals.css",
-    "./tokens": "./dist/styles/tokens.css"
+    "./styles": "./src/styles/globals.css",
+    "./tokens": "./src/styles/tokens.css"
   },
   "files": ["dist", "src"],
   "scripts": {
