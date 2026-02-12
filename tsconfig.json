@@ -9,6 +9,6 @@
     "isolatedModules": true
   },
   "references": [
-    { "path": "./packages/ui" }
+    { "path": "./packages/eum-design-system" }
   ]
 }
