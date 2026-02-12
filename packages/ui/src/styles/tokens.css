@@ -1,0 +1,321 @@
+/* ============================================
+ * Design Tokens - E-um Design System (Figma)
+ * ============================================
+ * Layer 1: Primitives  — Raw color values (Figma 원본)
+ * Layer 2: Semantics   — Purpose-driven aliases (var → Primitive)
+ * Layer 3: App Mapping — shadcn/ui token bridge (var → Semantic)
+ *
+ * 참조 체인: Figma HEX → Primitive → Semantic → shadcn → Tailwind utility
+ */
+
+/* ============================================
+ * Layer 1: Primitive Colors
+ * ============================================ */
+:root {
+  /* Common */
+  --common-white: #ffffff;
+  --common-black: #000000;
+
+  /* Primary (Blue) */
+  --primary-50: #e8effd;
+  --primary-100: #d1e0fa;
+  --primary-150: #a3c1f5;
+  --primary-200: #74a2f1;
+  --primary-300: #4683ec;
+  --primary-400: #1350b9;
+  --primary-500: #0e3c8b;
+  --primary-600: #0a285c;
+  --primary-700: #08214d;
+  --primary-800: #05142e;
+  --primary-900: #020a17;
+
+  /* Secondary (Purple) */
+  --secondary-50: #eae8fc;
+  --secondary-100: #d5d1fa;
+  --secondary-150: #aca3f5;
+  --secondary-200: #8276ef;
+  --secondary-300: #5848ea;
+  --secondary-400: #4f3ee9;
+  --secondary-500: #2515b7;
+  --secondary-600: #1c1089;
+  --secondary-700: #130a5c;
+  --secondary-800: #09052e;
+  --secondary-900: #050317;
+
+  /* Neutral (Gray) */
+  --neutral-50: #f5f5f8;
+  --neutral-100: #ededf2;
+  --neutral-150: #e4e4e7;
+  --neutral-200: #c9c9cf;
+  --neutral-300: #aeaeb7;
+  --neutral-400: #93939f;
+  --neutral-500: #60606c;
+  --neutral-600: #484851;
+  --neutral-700: #303036;
+  --neutral-800: #18181b;
+  --neutral-900: #0c0c0e;
+
+  /* Red */
+  --red-50: #ffeeed;
+  --red-100: #ffe5e3;
+  --red-150: #ffcfcc;
+  --red-200: #ffa099;
+  --red-300: #ff7066;
+  --red-400: #ee392b;
+  --red-500: #cc0e00;
+  --red-600: #990a00;
+  --red-700: #660700;
+  --red-800: #330300;
+  --red-900: #1a0200;
+
+  /* Green */
+  --green-50: #ecf8f4;
+  --green-100: #dcf3ea;
+  --green-150: #c8edde;
+  --green-200: #b3e5d2;
+  --green-300: #8dd8bb;
+  --green-400: #67cba5;
+  --green-500: #349872;
+  --green-600: #277255;
+  --green-700: #1a4c39;
+  --green-800: #0d261c;
+  --green-900: #07130e;
+
+  /* Orange */
+  --orange-50: #fff5f0;
+  --orange-100: #ffeae0;
+  --orange-150: #ffdccc;
+  --orange-200: #ffb999;
+  --orange-300: #ff9666;
+  --orange-400: #ff7433;
+  --orange-500: #c43e00;
+  --orange-600: #902d00;
+  --orange-700: #662000;
+  --orange-800: #331000;
+  --orange-900: #1a0800;
+
+  /* Opacity */
+  --opacity-50: #0c0c0e0d;
+  --opacity-100: #0c0c0e1a;
+  --opacity-200: #0c0c0e33;
+  --opacity-300: #0c0c0e4d;
+  --opacity-400: #0c0c0e66;
+  --opacity-500: #0c0c0e80;
+  --opacity-600: #0c0c0e99;
+  --opacity-700: #0c0c0eb2;
+  --opacity-800: #0c0c0ecc;
+  --opacity-900: #0c0c0ee5;
+
+  /* Chart */
+  --chart-1: #e76e50;
+  --chart-2: #2a9d90;
+  --chart-3: #274754;
+  --chart-4: #e8c468;
+  --chart-5: #f4a462;
+
+  /* Radius */
+  --radius-none: 0px;
+  --radius-xs: 4px;
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Typography - Size */
+  --typo-size-xs: 0.75rem;
+  --typo-size-s: 0.875rem;
+  --typo-size-m: 1rem;
+  --typo-size-l: 1.125rem;
+  --typo-size-xl: 1.25rem;
+  --typo-size-2xl: 1.5rem;
+  --typo-size-3xl: 1.75rem;
+
+  /* Typography - Weight */
+  --typo-weight-medium: 500;
+  --typo-weight-semibold: 600;
+  --typo-weight-bold: 700;
+
+  /* Typography - Line Height */
+  --typo-leading-tight: 1.3;
+  --typo-leading-normal: 1.5;
+
+  /* Typography - Letter Spacing */
+  --typo-tracking-tight: -0.04em;
+  --typo-tracking-normal: -0.02em;
+
+  /* Space */
+  --size-space-0: 0px;
+  --size-space-2: 2px;
+  --size-space-4: 4px;
+  --size-space-6: 6px;
+  --size-space-8: 8px;
+  --size-space-12: 12px;
+  --size-space-14: 14px;
+  --size-space-16: 16px;
+  --size-space-18: 18px;
+  --size-space-20: 20px;
+  --size-space-24: 24px;
+  --size-space-28: 28px;
+  --size-space-32: 32px;
+  --size-space-36: 36px;
+  --size-space-40: 40px;
+  --size-space-48: 48px;
+  --size-space-52: 52px;
+  --size-space-56: 56px;
+  --size-space-60: 60px;
+  --size-space-64: 64px;
+  --size-space-72: 72px;
+
+  /* Dimension */
+  --size-dimension-2: 2px;
+  --size-dimension-4: 4px;
+  --size-dimension-8: 8px;
+  --size-dimension-12: 12px;
+  --size-dimension-16: 16px;
+  --size-dimension-20: 20px;
+  --size-dimension-24: 24px;
+  --size-dimension-32: 32px;
+  --size-dimension-36: 36px;
+  --size-dimension-40: 40px;
+  --size-dimension-44: 44px;
+  --size-dimension-48: 48px;
+  --size-dimension-52: 52px;
+  --size-dimension-56: 56px;
+  --size-dimension-60: 60px;
+  --size-dimension-64: 64px;
+  --size-dimension-72: 72px;
+}
+
+/* ============================================
+ * Layer 2: Semantic Colors
+ * ============================================
+ * 모든 값이 Primitive를 var()로 참조 → Single Source of Truth
+ */
+:root {
+  /* Text */
+  --text-brand-primary: var(--primary-700);
+  --text-brand-secondary: var(--primary-500);
+  --text-brand-accent: var(--secondary-400);
+  --text-base-primary: var(--neutral-800);
+  --text-base-secondary: var(--neutral-600);
+  --text-base-tertiary: var(--neutral-500);
+  --text-base-quaternary: var(--neutral-400);
+  --text-base-inverse: var(--common-white);
+  --text-state-disabled: var(--opacity-200);
+  --text-status-success: var(--green-600);
+  --text-status-danger: var(--red-500);
+
+  /* Border */
+  --border-brand-primary: var(--primary-700);
+  --border-brand-subtle: var(--secondary-100);
+  --border-base-primary: var(--neutral-200);
+  --border-base-secondary: var(--neutral-150);
+  --border-base-tertiary: var(--neutral-100);
+  --border-state-disabled: var(--opacity-50);
+  --border-state-focused: var(--primary-300);
+  --border-state-selected: var(--primary-700);
+  --border-status-success: var(--green-600);
+  --border-status-danger: var(--red-500);
+
+  /* Icon */
+  --icon-brand-primary: var(--primary-700);
+  --icon-brand-secondary: var(--primary-500);
+  --icon-base-primary: var(--neutral-800);
+  --icon-base-secondary: var(--neutral-500);
+  --icon-base-tertiary: var(--neutral-400);
+  --icon-base-inverse: var(--common-white);
+  --icon-state-disabled: var(--opacity-200);
+  --icon-status-success: var(--green-600);
+  --icon-status-danger: var(--red-500);
+
+  /* Background */
+  --bg-brand-primary: var(--primary-800);
+  --bg-brand-secondary: var(--primary-700);
+  --bg-brand-tertiary: var(--primary-100);
+  --bg-brand-quaternary: var(--primary-50);
+  --bg-base-primary: var(--common-white);
+  --bg-base-secondary: var(--neutral-50);
+  --bg-base-tertiary: var(--neutral-150);
+  --bg-base-quaternary: var(--neutral-200);
+  --bg-state-disabled: var(--opacity-50);
+  --bg-status-success: var(--green-100);
+  --bg-status-danger: var(--red-100);
+
+  /* Overlay */
+  --overlay-dim: var(--opacity-800);
+}
+
+/* ============================================
+ * Layer 3: App Mapping (shadcn/ui)
+ * ============================================ */
+:root {
+  --background: var(--bg-base-primary);
+  --foreground: var(--text-base-primary);
+
+  --card: var(--bg-base-primary);
+  --card-foreground: var(--text-base-primary);
+
+  --popover: var(--bg-base-primary);
+  --popover-foreground: var(--text-base-primary);
+
+  --primary: var(--bg-brand-primary);
+  --primary-foreground: var(--text-base-inverse);
+
+  --secondary: var(--bg-base-secondary);
+  --secondary-foreground: var(--text-base-primary);
+
+  --muted: var(--bg-base-secondary);
+  --muted-foreground: var(--text-base-tertiary);
+
+  --accent: var(--bg-brand-quaternary);
+  --accent-foreground: var(--text-brand-primary);
+
+  --destructive: var(--red-500);
+  --destructive-foreground: var(--common-white);
+
+  --border: var(--border-base-secondary);
+  --input: var(--border-base-secondary);
+  --ring: var(--border-state-focused);
+
+  --radius: var(--radius-xl);
+}
+
+/* ============================================
+ * Dark Mode
+ * ============================================ */
+.dark {
+  --background: var(--neutral-900);
+  --foreground: var(--neutral-50);
+
+  --card: var(--neutral-800);
+  --card-foreground: var(--neutral-50);
+
+  --popover: var(--neutral-800);
+  --popover-foreground: var(--neutral-50);
+
+  --primary: var(--primary-300);
+  --primary-foreground: var(--primary-900);
+
+  --secondary: var(--neutral-700);
+  --secondary-foreground: var(--neutral-50);
+
+  --muted: var(--neutral-700);
+  --muted-foreground: var(--neutral-400);
+
+  --accent: var(--primary-800);
+  --accent-foreground: var(--primary-100);
+
+  --destructive: var(--red-400);
+  --destructive-foreground: var(--red-900);
+
+  --border: var(--neutral-700);
+  --input: var(--neutral-700);
+  --ring: var(--primary-300);
+
+  --chart-1: #2662d9;
+  --chart-2: #2eb88a;
+  --chart-3: #e88c30;
+  --chart-4: #af57db;
+  --chart-5: #e23670;
+}
