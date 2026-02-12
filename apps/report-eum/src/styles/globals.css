@@ -1,2 +1,2 @@
-@import "tailwindcss";
-@import "@eum/design-system/tokens";
+@import "@eum/design-system/styles";
+@source "../../../../packages/design-system/src";
