@@ -9,7 +9,7 @@
     "isolatedModules": true
   },
   "references": [
-    { "path": "./packages/eum-design-system" },
+    { "path": "./packages/design-system" },
     { "path": "./apps/report-eum" }
   ]
 }

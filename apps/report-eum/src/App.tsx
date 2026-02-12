@@ -1,4 +1,4 @@
-import { Button } from "@eum/eum-design-system";
+import { Button } from "@eum/design-system";
 
 function App() {
   return (

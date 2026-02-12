@@ -11,7 +11,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@eum/eum-design-system": "workspace:*",
+    "@eum/design-system": "workspace:*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
